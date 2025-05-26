@@ -1,9 +1,12 @@
-fastapi 
-uvicorn 
-torch 
-torchvision 
-Pillow 
-requests 
-whisper 
-transformers 
-sentencepiece 
+
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-dotenv
+google-generativeai
+pdfminer.six
+PyMySQL # Replaced mysqlclient for easier installation
+# For resume parsing, you might need libraries like:
+# python-docx
+# pdfminer.six
+# tika

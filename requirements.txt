@@ -1,0 +1,9 @@
+fastapi 
+uvicorn 
+torch 
+torchvision 
+Pillow 
+requests 
+whisper 
+transformers 
+sentencepiece 

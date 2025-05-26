@@ -1,0 +1,40 @@
+<div class="input-form">
+    <h2> department</h2>
+
+<form [formGroup]="departmentForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>ID:</label>
+    <input formControlName="id" />
+  </div>
+
+  <div>
+    <label>Name:</label>
+    <input formControlName="email" type="name" />
+  </div>
+
+  <div>
+    <label>location:</label>
+    <input formControlName="location" />
+  </div>
+   <div class="form-field">
+      <label>Department ID:</label>
+      <input type="number" formControlName="departmentId" placeholder="e.g., 101" />
+    </div>
+
+
+
+  <button type="submit" class="submit-button">{{ editing ? 'Update' : 'Add' }} <article></article></button>
+</form>
+
+<hr>
+
+<div class="action-section">
+  <h3>Manage Existing articles</h3>
+
+  <div class="action-buttons">
+    <input #empId type="number" placeholder="Employee ID" />
+    <button class="button" (click)="loadarticle(empId.valueAsNumber)">Load</button>
+    <button class="button" (click)="deletearticle(empId.valueAsNumber)">Delete</button>
+  </div>
+</div>
+</div>

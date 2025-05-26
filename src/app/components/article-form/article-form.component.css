@@ -1,0 +1,41 @@
+/* src/app/components/article-form/article-form.component.css */
+.article-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  color: #3f51b5; /* Angular Material primary color */
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form fields */
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+  min-height: 100px; /* Minimum height for textarea */
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+}
+
+button {
+  margin-right: 10px; /* Space between buttons */
+}

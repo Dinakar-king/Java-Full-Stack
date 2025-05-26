@@ -1,0 +1,15 @@
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http'; // <-- Import provideHttpClient for standalone
+import { provideAnimations } from '@angular/platform-browser/animations'; // <-- Import provideAnimations
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideHttpClient(), // <-- Add this to provide HttpClient for services
+    provideAnimations() // <-- Add this for Angular Material animations
+  ]
+};

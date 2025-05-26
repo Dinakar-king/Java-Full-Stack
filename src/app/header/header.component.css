@@ -1,0 +1,12 @@
+.header{
+    height: 3rem;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    color: darkblue;
+    font-size: 1.5rem;
+    font-weight: 900;
+}

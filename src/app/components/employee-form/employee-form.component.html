@@ -1,0 +1,43 @@
+<div class="input-form">
+    <h2> Employee</h2>
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Name:</label>
+    <input formControlName="name" />
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input formControlName="email" type="email" />
+  </div>
+
+  <div>
+    <label>Position:</label>
+    <input formControlName="position" />
+  </div>
+   <div class="form-field">
+      <label>Department ID:</label>
+      <input type="number" formControlName="departmentId" placeholder="e.g., 101" />
+    </div>
+
+    <div class="form-field">
+      <label>Hire Date:</label>
+      <input type="date" formControlName="hireDate" />
+    </div>
+
+  <button type="submit" class="submit-button">{{ editing ? 'Update' : 'Add' }} Employee</button>
+</form>
+
+<hr>
+
+<div class="action-section">
+  <h3>Manage Existing Employee</h3>
+
+  <div class="action-buttons">
+    <input #empId type="number" placeholder="Employee ID" />
+    <button class="button" (click)="loadEmployee(empId.valueAsNumber)">Load</button>
+    <button class="button" (click)="deleteEmployee(empId.valueAsNumber)">Delete</button>
+  </div>
+</div>
+</div>

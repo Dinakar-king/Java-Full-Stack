@@ -1,0 +1,30 @@
+<!-- employee-table.component.html -->
+<div class="container">
+  <button (click)="loadEmployees()">Load Employees</button>
+  
+  <div *ngIf="loading" class="info">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="employees.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Position</th>
+        <th>Department ID</th>
+        <th>Hire Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.position || 'N/A' }}</td>
+        <td>{{ emp.departmentId || 'N/A' }}</td>
+        <td>{{ emp.hireDate || 'N/A' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

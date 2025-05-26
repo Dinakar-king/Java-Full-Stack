@@ -1,0 +1,25 @@
+
+<div class="container">
+  <button (click)="loadDepartments()">Load Departments</button>
+
+  <div *ngIf="loading" class="info">Loading...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="departments.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>location</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dept of departments">
+        <td>{{ dept.id }}</td>
+        <td>{{ dept.name }}</td>
+        <td>{{ dept.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
